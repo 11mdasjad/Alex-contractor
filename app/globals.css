@@ -2182,3 +2182,9 @@ label .required {
 }
 
 .team-avatar .team-portrait-afsar-ali { object-position: center top; }
+
+.service-category-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 40px; }
+.service-category-nav a { padding: 11px 16px; border: 1px solid #dbe3ed; border-radius: 24px; color: #12365c; background: #f4f7fb; font-size: 12px; font-weight: 600; }
+.service-category-nav a:hover, .service-category-nav a:focus-visible { background: #082b55; color: white; }
+.service-category-section { margin-bottom: 52px; scroll-margin-top: 115px; }
+.service-category-section > h2 { margin-bottom: 24px; font-size: clamp(23px, 3vw, 30px); }

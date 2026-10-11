@@ -156,7 +156,7 @@ export default async function Page({
         <section className="section container">
           <div className="notice">
             {kind === "services"
-              ? "Proposed service area. Availability, qualifications and scope must be confirmed by ADEX before engagement."
+              ? "Share your project requirements to discuss scope, delivery and availability."
               : item.verified
                 ? "Project information supplied by ADEX."
                 : "Demonstration project. This architectural study and its photographs do not represent ADEX work."}
@@ -277,12 +277,14 @@ export default async function Page({
       </>
     );
   }
-  if (name === "services")
+  if (name === "services") {
+    const entries = await catalogue("services");
+    const categories = [...new Set(entries.map((entry) => entry.category))];
     return (
       <>
         <PageHero
           title="Our Services"
-          description="Coordinated thinking. Purposeful spaces. Explore our proposed areas of expertise."
+          description="Coordinated thinking. Purposeful spaces. Explore our construction, engineering and specialist services."
         />
         <section className="section container">
           <SectionHead
@@ -290,15 +292,23 @@ export default async function Page({
             title="Expertise across every stage."
             description="Explore the right starting point for your project."
           />
-          <ServiceGrid items={await catalogue("services")} />
-          <p className="fine-print">
-            All service areas are proposed and require company confirmation.
-            Photographs are illustrative.
-          </p>
+          <nav className="service-category-nav" aria-label="Service categories">
+            {categories.map((category, index) => (
+              <a key={category} href={`#service-group-${index}`}>{category}</a>
+            ))}
+          </nav>
+          {categories.map((category, index) => (
+            <section className="service-category-section" key={category} id={`service-group-${index}`} aria-labelledby={`service-heading-${index}`}>
+              <h2 id={`service-heading-${index}`}>{category}</h2>
+              <ServiceGrid items={entries.filter((entry) => entry.category === category)} />
+            </section>
+          ))}
+          <p className="fine-print">Photographs are illustrative. Contact us to discuss your project scope and requirements.</p>
         </section>
         <CTA />
       </>
     );
+  }
   if (name === "projects")
     return (
       <>

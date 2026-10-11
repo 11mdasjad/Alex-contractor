@@ -21,91 +21,310 @@ export type Entry = {
   seoDescription?: string;
 };
 export const services: Entry[] = [
-  [
-    "building-construction",
-    "Building Construction",
-    "Thoughtfully planned spaces. Built to last.",
-    "hero",
-  ],
-  [
-    "civil-engineering",
-    "Civil Engineering",
-    "Strong foundations for better infrastructure.",
-    "construction",
-  ],
-  [
-    "general-contracting",
-    "General Contracting",
-    "A coordinated approach from start to finish.",
-    "engineers",
-  ],
-  [
-    "project-management",
-    "Project Management",
-    "Clarity, coordination and control at every stage.",
-    "architecture",
-  ],
-  [
-    "residential-construction",
-    "Residential Construction",
-    "Considered spaces for everyday living.",
-    "residential",
-  ],
-  [
-    "commercial-construction",
-    "Commercial Construction",
-    "Places that help businesses move forward.",
-    "hero",
-  ],
-  [
-    "industrial-construction",
-    "Industrial Construction",
-    "Purpose-built environments for industry.",
-    "industrial",
-  ],
-  [
-    "renovation-and-remodeling",
-    "Renovation & Remodeling",
-    "New possibilities for existing spaces.",
-    "interior",
-  ],
-  [
-    "infrastructure-development",
-    "Infrastructure Development",
-    "Connecting communities through essential works.",
-    "construction",
-  ],
-  [
-    "structural-works",
-    "Structural Works",
-    "Precision in concrete, steel and structural systems.",
-    "architecture",
-  ],
-  [
-    "engineering-consultancy",
-    "Engineering Consultancy",
-    "Practical thinking for complex challenges.",
-    "engineers",
-  ],
-  [
-    "maintenance-and-repair",
-    "Maintenance & Repair",
-    "Protecting the performance of your buildings.",
-    "industrial",
-  ],
-].map(([slug, title, description, image]) => ({
-  slug,
-  title,
-  description,
-  image: "/images/" + image + ".jpg",
-  category: "Proposed service",
-  scope: [
-    "Requirement review and site coordination",
-    "Planning, scope definition and cost estimation",
-    "Workmanship and material checks",
-    "Progress documentation and handover",
-  ],
-}));
+  {
+    "slug": "building-construction",
+    "title": "Building Construction",
+    "description": "Thoughtfully planned spaces. Built to last.",
+    "image": "/images/hero.jpg",
+    "category": "Civil & Structural Works",
+    "scope": [
+      "Building construction",
+      "Blockwork and plastering",
+      "Waterproofing and insulation",
+      "Flooring, tiling, and painting",
+      "Roofing and false ceiling works"
+    ]
+  },
+  {
+    "slug": "civil-engineering",
+    "title": "Civil Engineering",
+    "description": "Strong foundations for better infrastructure.",
+    "image": "/images/construction.jpg",
+    "category": "Civil & Structural Works",
+    "scope": [
+      "Civil works and site preparation",
+      "Concrete and foundation works",
+      "Roadworks and paving",
+      "Landscaping"
+    ]
+  },
+  {
+    "slug": "general-contracting",
+    "title": "General Contracting",
+    "description": "A coordinated approach from start to finish.",
+    "image": "/images/engineers.jpg",
+    "category": "Construction Support & Maintenance",
+    "scope": [
+      "General contracting and trade coordination",
+      "Material supply and procurement",
+      "Equipment rental",
+      "Site installation coordination"
+    ]
+  },
+  {
+    "slug": "project-management",
+    "title": "Project Management",
+    "description": "Clarity, coordination and control at every stage.",
+    "image": "/images/architecture.jpg",
+    "category": "Construction Support & Maintenance",
+    "scope": [
+      "Project management and planning",
+      "Project coordination and supervision",
+      "Programme and resource planning",
+      "Progress reporting and handover coordination"
+    ]
+  },
+  {
+    "slug": "residential-construction",
+    "title": "Residential Construction",
+    "description": "Considered spaces for everyday living.",
+    "image": "/images/residential.jpg",
+    "category": "Civil & Structural Works",
+    "scope": [
+      "Residential building construction",
+      "Concrete and foundation works",
+      "Blockwork and plastering",
+      "Flooring, tiling, and painting",
+      "Roofing and waterproofing"
+    ]
+  },
+  {
+    "slug": "commercial-construction",
+    "title": "Commercial Construction",
+    "description": "Places that help businesses move forward.",
+    "image": "/images/hero.jpg",
+    "category": "Civil & Structural Works",
+    "scope": [
+      "Commercial building construction",
+      "Structural and civil works",
+      "Interior fit-out coordination",
+      "Flooring, ceilings, and finishes"
+    ]
+  },
+  {
+    "slug": "industrial-construction",
+    "title": "Industrial Construction",
+    "description": "Purpose-built environments for industry.",
+    "image": "/images/industrial.jpg",
+    "category": "Civil & Structural Works",
+    "scope": [
+      "Industrial building construction",
+      "Concrete and structural works",
+      "Equipment installation coordination",
+      "Building services coordination"
+    ]
+  },
+  {
+    "slug": "renovation-and-remodeling",
+    "title": "Renovation & Remodeling",
+    "description": "New possibilities for existing spaces.",
+    "image": "/images/interior.jpg",
+    "category": "Civil & Structural Works",
+    "scope": [
+      "Demolition and renovation",
+      "Fit-out and interior works",
+      "Repair and refurbishment",
+      "Flooring, tiling, and painting",
+      "Roofing and false ceiling works"
+    ]
+  },
+  {
+    "slug": "infrastructure-development",
+    "title": "Infrastructure Development",
+    "description": "Connecting communities through essential works.",
+    "image": "/images/construction.jpg",
+    "category": "Civil & Structural Works",
+    "scope": [
+      "Roadworks and paving",
+      "Landscaping",
+      "Civil infrastructure works",
+      "Site preparation and foundation works"
+    ]
+  },
+  {
+    "slug": "structural-works",
+    "title": "Structural Works",
+    "description": "Precision in concrete, steel and structural systems.",
+    "image": "/images/architecture.jpg",
+    "category": "Civil & Structural Works",
+    "scope": [
+      "Concrete and foundation works",
+      "Structural steel fabrication and installation",
+      "Blockwork and structural coordination",
+      "Waterproofing and insulation"
+    ]
+  },
+  {
+    "slug": "engineering-consultancy",
+    "title": "Engineering Consultancy",
+    "description": "Practical thinking for complex challenges.",
+    "image": "/images/engineers.jpg",
+    "category": "Construction Support & Maintenance",
+    "scope": [
+      "Technical consultancy",
+      "Scope and constructability reviews",
+      "Engineering coordination",
+      "Project planning support"
+    ]
+  },
+  {
+    "slug": "maintenance-and-repair",
+    "title": "Maintenance & Repair",
+    "description": "Protecting the performance of your buildings.",
+    "image": "/images/industrial.jpg",
+    "category": "Construction Support & Maintenance",
+    "scope": [
+      "General maintenance",
+      "Preventive and corrective maintenance",
+      "Facility management",
+      "Repair and refurbishment"
+    ]
+  },
+  {
+    "slug": "electrical-works",
+    "title": "Electrical Works",
+    "description": "Electrical installation, distribution, testing and maintenance across LV, MV and HV systems.",
+    "image": "/images/industrial.jpg",
+    "category": "Electrical, Mechanical & MEP",
+    "body": "Electrical installation, distribution, testing and maintenance across LV, MV and HV systems. Our scope can be coordinated with your project programme, technical requirements and handover plan.",
+    "scope": [
+      "Electrical installation and maintenance",
+      "LV, MV, and HV electrical systems",
+      "Cable pulling, dressing, and termination",
+      "Cable tray and trunking installation",
+      "Lighting and power distribution",
+      "DB, MDB, and SMDB installation",
+      "Earthing and lightning protection",
+      "Electrical testing and commissioning",
+      "Transformer and switchgear installation",
+      "VLF and insulation resistance testing"
+    ]
+  },
+  {
+    "slug": "mechanical-services",
+    "title": "Mechanical Services",
+    "description": "HVAC, plumbing, firefighting, piping and equipment services for building performance.",
+    "image": "/images/industrial.jpg",
+    "category": "Electrical, Mechanical & MEP",
+    "body": "HVAC, plumbing, firefighting, piping and equipment services for building performance. Our scope can be coordinated with your project programme, technical requirements and handover plan.",
+    "scope": [
+      "HVAC installation and maintenance",
+      "Chilled water and ventilation systems",
+      "Plumbing and drainage",
+      "Firefighting systems",
+      "Pumps and motors installation",
+      "Ducting and piping works",
+      "Equipment installation and commissioning"
+    ]
+  },
+  {
+    "slug": "mep-services",
+    "title": "MEP Services",
+    "description": "Integrated mechanical, electrical and plumbing delivery, from coordination to handover.",
+    "image": "/images/engineers.jpg",
+    "category": "Electrical, Mechanical & MEP",
+    "body": "Integrated mechanical, electrical and plumbing delivery, from coordination to handover. Our scope can be coordinated with your project programme, technical requirements and handover plan.",
+    "scope": [
+      "Complete MEP installation",
+      "MEP coordination and supervision",
+      "Shop drawings and as-built drawings",
+      "Material supply and installation",
+      "Testing, commissioning, and handover",
+      "Preventive and corrective maintenance"
+    ]
+  },
+  {
+    "slug": "fire-alarm-and-safety-systems",
+    "title": "Fire Alarm & Safety Systems",
+    "description": "Detection, alarms, emergency lighting and fire suppression system installation and testing.",
+    "image": "/images/construction.jpg",
+    "category": "Safety, ELV & Railway Systems",
+    "body": "Detection, alarms, emergency lighting and fire suppression system installation and testing. Our scope can be coordinated with your project programme, technical requirements and handover plan.",
+    "scope": [
+      "Fire alarm system installation",
+      "Smoke and heat detector installation",
+      "Fire alarm panel programming",
+      "Emergency lighting systems",
+      "Fire suppression systems",
+      "Testing and commissioning"
+    ]
+  },
+  {
+    "slug": "elv-and-low-current-systems",
+    "title": "ELV & Low-Current Systems",
+    "description": "Connected security, communications, networking and building management systems.",
+    "image": "/images/architecture.jpg",
+    "category": "Safety, ELV & Railway Systems",
+    "body": "Connected security, communications, networking and building management systems. Our scope can be coordinated with your project programme, technical requirements and handover plan.",
+    "scope": [
+      "CCTV installation",
+      "Access control systems",
+      "Structured cabling and networking",
+      "Public address systems",
+      "Intercom systems",
+      "BMS installation and integration",
+      "Fiber-optic cable installation and testing"
+    ]
+  },
+  {
+    "slug": "metro-and-railway-signaling",
+    "title": "Metro & Railway Signaling Services",
+    "description": "Signaling, fare collection, trackside equipment and railway systems installation support.",
+    "image": "/images/construction.jpg",
+    "category": "Safety, ELV & Railway Systems",
+    "body": "Signaling, fare collection, trackside equipment and railway systems installation support. Our scope can be coordinated with your project programme, technical requirements and handover plan.",
+    "scope": [
+      "Railway signaling installation",
+      "Automatic Fare Collection (AFC) systems",
+      "Track circuit installation and testing",
+      "Point machine installation and testing",
+      "Eurobalise installation",
+      "Relay interface installation",
+      "Axle counter and train detection systems",
+      "Signaling cable pulling and termination",
+      "Third-rail power supply systems",
+      "Telecom and trackside equipment installation",
+      "Testing, commissioning, and maintenance"
+    ]
+  },
+  {
+    "slug": "qa-qc-and-testing",
+    "title": "QA/QC & Testing Services",
+    "description": "Inspection, testing and quality documentation from material checks through handover.",
+    "image": "/images/engineers.jpg",
+    "category": "Quality & Site Support",
+    "body": "Inspection, testing and quality documentation from material checks through handover. Our scope can be coordinated with your project programme, technical requirements and handover plan.",
+    "scope": [
+      "Electrical and MEP inspections",
+      "Inspection and Test Plans (ITPs)",
+      "Method statements and risk assessments",
+      "Inspection requests (IRs)",
+      "Material inspections",
+      "Snagging and de-snagging",
+      "Quality documentation and handover",
+      "FAT, SAT, and commissioning support",
+      "Cable testing and continuity checks"
+    ]
+  },
+  {
+    "slug": "manpower-and-site-support",
+    "title": "Manpower & Site Support",
+    "description": "Trade teams, technical personnel and site coordination support for project delivery.",
+    "image": "/images/engineers.jpg",
+    "category": "Quality & Site Support",
+    "body": "Trade teams, technical personnel and site coordination support for project delivery. Our scope can be coordinated with your project programme, technical requirements and handover plan.",
+    "scope": [
+      "Skilled and unskilled manpower supply",
+      "Electrical technicians and engineers",
+      "MEP supervisors",
+      "QA/QC inspectors and engineers",
+      "Cable pulling teams",
+      "Site installation teams",
+      "Project coordination and supervision",
+      "Preventive and corrective maintenance teams"
+    ]
+  }
+];
 export const projects: Entry[] = [
   {
     slug: "business-complex",
@@ -226,7 +445,7 @@ export const steps = [
 export const faqs = [
   [
     "What services can I enquire about?",
-    "You can enquire about construction, civil engineering, contracting, project management and the other categories on our Services page. These are proposed service areas; availability and scope must be confirmed directly for your project.",
+    "Our services cover civil and structural works, electrical, mechanical and MEP systems, fire safety, ELV, railway signaling, QA/QC, manpower and construction support. Explore the Services page for detailed scopes, then share your project requirements.",
   ],
   [
     "How do I start a project conversation?",

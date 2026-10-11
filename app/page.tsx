@@ -108,7 +108,7 @@ export default async function Home() {
         />
         <ServiceGrid items={services.slice(0, 8)} />
         <p className="fine-print">
-          Proposed service areas. Availability and scope are confirmed for each
+          Availability and scope are confirmed for each
           project.
         </p>
       </section>
