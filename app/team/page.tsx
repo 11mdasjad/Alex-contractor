@@ -29,6 +29,7 @@ const members = [
   },
   {
     name: "Afsar Ali", slug: "afsar-ali", role: "Safety Manager",
+    photo: "/images/team/afsar-ali.jpeg",
     bio: "Making safety part of everyday site coordination. Afsar’s focus is supporting safety briefings, tracking site observations and coordinating follow-up actions with the project team to encourage responsible working practices.",
     focus: ["Site safety", "Safety briefings", "Site observations"],
   },
@@ -50,7 +51,7 @@ export default function TeamPage() {
               <div className="team-visual">
                 <div className="team-avatar">
                   {member.photo ? (
-                    <img className={`team-portrait team-portrait-${member.slug}`} src={member.photo} alt={member.name} width={member.slug === "firoz-alam" ? 990 : 960} height={1280} />
+                    <img className={`team-portrait team-portrait-${member.slug}`} src={member.photo} alt={member.name} width={member.slug === "afsar-ali" ? 692 : member.slug === "firoz-alam" ? 990 : 960} height={member.slug === "afsar-ali" ? 852 : 1280} />
                   ) : (
                     <span className="team-initials" aria-label={`${member.name} — initials illustration`} role="img">
                       {member.name.split(" ").map((part) => part[0]).join("")}

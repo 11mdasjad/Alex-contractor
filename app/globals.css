@@ -2180,3 +2180,5 @@ label .required {
   .team-avatar { width: 196px; height: 196px; }
   .footer-brand .brand-mark { float: none; margin-right: 0; }
 }
+
+.team-avatar .team-portrait-afsar-ali { object-position: center top; }

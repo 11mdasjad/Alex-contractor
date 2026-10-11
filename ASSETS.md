@@ -13,3 +13,5 @@ Illustrative stock photography downloaded from Unsplash. No photograph is repres
 - industrial.jpg: https://images.unsplash.com/photo-1513828583688-c52646db42da
 
 Inter and Manrope are loaded from Google Fonts under their open font licenses. System sans-serif fallbacks apply when unavailable. Lucide icons are distributed under ISC.
+
+Afsar Ali’s user-supplied portrait is stored unchanged in `public/images/team/afsar-ali.jpeg`, with top-centered positioning in the shared circular frame.
