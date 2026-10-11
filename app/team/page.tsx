@@ -5,7 +5,7 @@ import { origin } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Our Team",
-  description: "Meet the ADEX team across project leadership, operations, IT and safety.",
+  description: "Meet the ADEX team across project leadership, operations, IT, safety and human resources.",
   alternates: { canonical: origin + "/team" },
 };
 
@@ -32,6 +32,11 @@ const members = [
     photo: "/images/team/afsar-ali.jpeg",
     bio: "Making safety part of everyday site coordination. Afsar’s focus is supporting safety briefings, tracking site observations and coordinating follow-up actions with the project team to encourage responsible working practices.",
     focus: ["Site safety", "Safety briefings", "Site observations"],
+  },
+  {
+    name: "Ashfaque Alam", slug: "ashfaque-alam", role: "HR Manager",
+    bio: "Supporting the people behind every project. Ashfaque’s focus is coordinating recruitment and onboarding, maintaining employee records and helping team members with day-to-day HR queries and workplace communication.",
+    focus: ["Recruitment", "Onboarding", "Employee support"],
   },
 ];
 
