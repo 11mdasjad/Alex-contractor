@@ -2156,28 +2156,28 @@ label .required {
 /* Team profiles */
 .team-intro { max-width: 690px; margin-bottom: 38px; }
 .team-intro p { color: var(--muted); line-height: 1.8; }
-.team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
-.team-card { border: 1px solid #e1e7ef; border-radius: 16px; overflow: hidden; background: white; }
-.team-visual { display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 32px 20px 24px; background: linear-gradient(145deg, #f3f6fb, #e3ebf5); }
-.team-avatar { width: 224px; height: 224px; flex-shrink: 0; border-radius: 50%; overflow: hidden; border: 6px solid white; background: #082b55; box-shadow: 0 8px 26px #082b551a; }
+.team-section { width: min(1600px, calc(100% - 64px)); }
+.team-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; align-items: stretch; }
+.team-scroll-hint { display: none; }
+.team-grid:focus-visible { outline: 3px solid #4c83ff; outline-offset: 5px; }
+.team-card { min-width: 0; display: flex; flex-direction: column; border: 1px solid #e1e7ef; border-radius: 16px; overflow: hidden; background: white; }
+.team-visual { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 26px 12px 20px; background: linear-gradient(145deg, #f3f6fb, #e3ebf5); }
+.team-avatar { width: min(156px, 100%); aspect-ratio: 1; flex-shrink: 0; border-radius: 50%; overflow: hidden; border: 5px solid white; background: #082b55; box-shadow: 0 8px 26px #082b551a; }
 .team-avatar .team-portrait { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
 .team-initials { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; color: white; font-size: 52px; font-weight: 500; letter-spacing: 3px; }
 .team-visual-label { color: #50647d; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; text-align: center; }
-.team-card-body { padding: 28px; }
-.team-card-body h2 { font-size: 27px; margin: 0 0 8px; }
+.team-card-body { padding: 20px 16px; flex: 1; display: flex; flex-direction: column; text-align: center; }
+.team-card-body h2 { font-size: 20px; margin: 0 0 8px; }
 .team-role { color: var(--blue); font-size: 13px; font-weight: 700; margin-bottom: 16px; }
-.team-bio { color: #5b687b; font-size: 14px; line-height: 1.85; margin-bottom: 20px; }
-.team-focus { border-top: 1px solid #e7ecf2; padding-top: 17px; display: flex; flex-wrap: wrap; gap: 8px; }
-.team-focus span { background: #f2f5fa; color: #304967; border-radius: 20px; padding: 7px 12px; font-size: 11px; }
+.team-bio { color: #5b687b; font-size: 13px; line-height: 1.75; margin-bottom: 20px; }
+.team-focus { margin-top: auto; justify-content: center; border-top: 1px solid #e7ecf2; padding-top: 17px; display: flex; flex-wrap: wrap; gap: 8px; }
+.team-focus span { background: #f2f5fa; color: #304967; border-radius: 20px; padding: 6px 9px; font-size: 10px; }
 @media (min-width: 681px) and (max-width: 900px) {
   .header-inner { gap: 14px; }
   .header .brand-mark { width: 102px; height: 68px; }
   .navigation { gap: 10px; }
 }
 @media (max-width: 680px) {
-  .team-grid { grid-template-columns: 1fr; gap: 22px; }
-  .team-card-body { padding: 23px; }
-  .team-avatar { width: 196px; height: 196px; }
   .footer-brand .brand-mark { float: none; margin-right: 0; }
 }
 
@@ -2190,3 +2190,11 @@ label .required {
 .service-category-section > h2 { margin-bottom: 24px; font-size: clamp(23px, 3vw, 30px); }
 
 .team-avatar .team-portrait-ashfaque-alam { object-position: center top; }
+
+.team-avatar .team-portrait-md-asjad { object-position: center center; }
+@media (max-width: 1100px) {
+  .team-section { width: calc(100% - 36px); }
+  .team-grid { grid-template-columns: repeat(5, minmax(250px, 28vw)); overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 18px; scrollbar-width: thin; scrollbar-color: #8198b5 #eaf0f6; }
+  .team-card { scroll-snap-align: start; }
+  .team-scroll-hint { display: block; margin: 0 0 18px; color: #50647d; font-size: 12px; }
+}

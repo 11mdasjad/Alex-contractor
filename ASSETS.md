@@ -17,3 +17,5 @@ Inter and Manrope are loaded from Google Fonts under their open font licenses. S
 Afsar Ali’s user-supplied portrait is stored unchanged in `public/images/team/afsar-ali.jpeg`, with top-centered positioning in the shared circular frame.
 
 Ashfaque Alam’s user-supplied portrait is stored unchanged in `public/images/team/ashfaque-alam.png`, with top-centered positioning in the shared circular frame.
+
+Md Asjad’s supplied sunglasses portrait is stored unchanged in `public/images/team/md-asjad.png` and displayed in the shared circular frame.

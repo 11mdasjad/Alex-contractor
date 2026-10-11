@@ -24,6 +24,7 @@ const members = [
   },
   {
     name: "Md Asjad", slug: "md-asjad", role: "IT Manager",
+    photo: "/images/team/md-asjad.png",
     bio: "Keeping technology connected to everyday work. Asjad’s focus is maintaining IT systems, supporting the team with technical issues and organising digital tools that help the office and project teams work efficiently.",
     focus: ["IT systems", "Technical support", "Digital tools"],
   },
@@ -45,26 +46,27 @@ export default function TeamPage() {
   return (
     <>
       <PageHero title="The people behind ADEX." eyebrow="OUR TEAM" description="Shared purpose. Clear responsibilities. A thoughtful approach to every project." image="/images/engineers.jpg" />
-      <section className="section container">
+      <section className="section container team-section">
         <div className="team-intro">
           <div className="eyebrow">WORKING TOGETHER</div>
           <h2>One team. Every stage of your project.</h2>
           <p>From understanding your requirements to coordinating work on site, meet the people bringing the different parts of your project together.</p>
         </div>
-        <div className="team-grid">
+        <p className="team-scroll-hint" id="team-scroll-help">Swipe or scroll sideways to meet all five team members.</p>
+        <div className="team-grid" role="region" aria-label="Our five team members" tabIndex={0}>
           {members.map((member) => (
             <article className="team-card" key={member.slug} aria-labelledby={member.slug}>
               <div className="team-visual">
                 <div className="team-avatar">
                   {member.photo ? (
-                    <img className={`team-portrait team-portrait-${member.slug}`} src={member.photo} alt={member.name} width={member.slug === "ashfaque-alam" ? 984 : member.slug === "afsar-ali" ? 692 : member.slug === "firoz-alam" ? 990 : 960} height={member.slug === "ashfaque-alam" ? 1599 : member.slug === "afsar-ali" ? 852 : 1280} />
+                    <img className={`team-portrait team-portrait-${member.slug}`} src={member.photo} alt={member.name} width={member.slug === "md-asjad" ? 1448 : member.slug === "ashfaque-alam" ? 984 : member.slug === "afsar-ali" ? 692 : member.slug === "firoz-alam" ? 990 : 960} height={member.slug === "md-asjad" ? 1086 : member.slug === "ashfaque-alam" ? 1599 : member.slug === "afsar-ali" ? 852 : 1280} />
                   ) : (
                     <span className="team-initials" aria-label={`${member.name} — initials illustration`} role="img">
                       {member.name.split(" ").map((part) => part[0]).join("")}
                     </span>
                   )}
                 </div>
-                <span className="team-visual-label">ADEX · Engineering &amp; Contracting</span>
+                <span className="team-visual-label">ADEX TEAM</span>
               </div>
               <div className="team-card-body">
                 <h2 id={member.slug}>{member.name}</h2>
