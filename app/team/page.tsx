@@ -17,9 +17,9 @@ const members = [
     focus: ["Project planning", "Team coordination", "Delivery"],
   },
   {
-    name: "Mamoon Rashid", slug: "mamoon-rashid", role: "Operations Lead",
-    photo: "/images/team/mamoon-rashid.jpeg",
-    bio: "Turning project plans into organised day-to-day action. Mamoon’s focus is coordinating resources, following up with suppliers and supporting a steady workflow between the office and the site.",
+    name: "Firoz Alam", slug: "firoz-alam", role: "Operation Manager",
+    photo: "/images/team/firoz-alam.jpeg",
+    bio: "Turning project plans into organised day-to-day action. Firoz’s focus is coordinating resources, following up with suppliers and supporting a steady workflow between the office and the site.",
     focus: ["Operations", "Resource planning", "Procurement"],
   },
 
@@ -41,7 +41,7 @@ export default function TeamPage() {
               <div className="team-visual">
                 <div className="team-avatar">
                   {member.photo ? (
-                    <img className={`team-portrait team-portrait-${member.slug}`} src={member.photo} alt={member.name} width={member.slug === "mamoon-rashid" ? 1096 : 960} height={member.slug === "mamoon-rashid" ? 1600 : 1280} />
+                    <img className={`team-portrait team-portrait-${member.slug}`} src={member.photo} alt={member.name} width={member.slug === "firoz-alam" ? 990 : 960} height={1280} />
                   ) : (
                     <span className="team-initials" aria-label={`${member.name} — initials illustration`} role="img">
                       {member.name.split(" ").map((part) => part[0]).join("")}
