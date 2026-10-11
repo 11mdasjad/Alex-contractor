@@ -18,6 +18,7 @@ const members = [
   },
   {
     name: "Mamoon Rashid", slug: "mamoon-rashid", role: "Operations Lead",
+    photo: "/images/team/mamoon-rashid.jpeg",
     bio: "Turning project plans into organised day-to-day action. Mamoon’s focus is coordinating resources, following up with suppliers and supporting a steady workflow between the office and the site.",
     focus: ["Operations", "Resource planning", "Procurement"],
   },
@@ -47,7 +48,15 @@ export default function TeamPage() {
           {members.map((member) => (
             <article className="team-card" key={member.slug} aria-labelledby={member.slug}>
               <div className="team-visual">
-                <img src={member.photo || `/images/team/${member.slug}.svg`} alt={member.photo ? member.name : `${member.name} — initials illustration`} width={member.photo ? 960 : 600} height={member.photo ? 1280 : 280} />
+                <div className="team-avatar">
+                  {member.photo ? (
+                    <img className={`team-portrait team-portrait-${member.slug}`} src={member.photo} alt={member.name} width={member.slug === "mamoon-rashid" ? 1096 : 960} height={member.slug === "mamoon-rashid" ? 1600 : 1280} />
+                  ) : (
+                    <span className="team-initials" aria-label={`${member.name} — initials illustration`} role="img">
+                      {member.name.split(" ").map((part) => part[0]).join("")}
+                    </span>
+                  )}
+                </div>
                 <span className="team-visual-label">ADEX · Engineering &amp; Contracting</span>
               </div>
               <div className="team-card-body">

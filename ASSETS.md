@@ -1,6 +1,6 @@
 # Asset provenance
 
-The current user-supplied ADEX logo is stored unchanged in `public/images/adex-logo-new.jpeg` and displayed with contain sizing. Md Saif Ali’s user-supplied portrait is stored unchanged in `public/images/team/md-saif-ali.jpeg` and displayed without cropping. Remaining Team SVG visuals are custom initials-based placeholders, not photographs. Team positions and responsibility-focused introductions are proposed editorial copy selected at the user’s request; no qualifications, employment history or achievements are asserted.
+The current user-supplied ADEX logo is stored unchanged in `public/images/adex-logo-new.jpeg` and displayed with contain sizing. Md Saif Ali’s user-supplied portrait is stored unchanged in `public/images/team/md-saif-ali.jpeg` and displayed in a circular portrait frame. Mamoon Rashid’s user-supplied portrait is stored unchanged in `public/images/team/mamoon-rashid.jpeg`. CSS fits portraits inside consistent round frames with individual face positioning. Remaining team profiles use initials placeholders, not photographs. Team positions and responsibility-focused introductions are proposed editorial copy selected at the user’s request; no qualifications, employment history or achievements are asserted.
 
 Illustrative stock photography downloaded from Unsplash. No photograph is represented as ADEX's own work. Usage subject to the Unsplash license: https://unsplash.com/license
 
