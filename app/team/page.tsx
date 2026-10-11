@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 const members = [
   {
     name: "Md Saif Ali", slug: "md-saif-ali", role: "Project Lead",
+    photo: "/images/team/md-saif-ali.jpeg",
     bio: "A clear direction from the first conversation to the final handover. Saif’s focus is project planning, aligning priorities and keeping clients and delivery teams connected throughout the work.",
     focus: ["Project planning", "Team coordination", "Delivery"],
   },
@@ -46,7 +47,7 @@ export default function TeamPage() {
           {members.map((member) => (
             <article className="team-card" key={member.slug} aria-labelledby={member.slug}>
               <div className="team-visual">
-                <img src={`/images/team/${member.slug}.svg`} alt={`${member.name} — initials illustration`} width={600} height={280} />
+                <img src={member.photo || `/images/team/${member.slug}.svg`} alt={member.photo ? member.name : `${member.name} — initials illustration`} width={member.photo ? 960 : 600} height={member.photo ? 1280 : 280} />
                 <span className="team-visual-label">ADEX · Engineering &amp; Contracting</span>
               </div>
               <div className="team-card-body">
