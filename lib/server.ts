@@ -1,4 +1,4 @@
-import { env } from "cloudflare:workers";
+import { env } from "@/lib/runtime";
 import { getChatGPTUser } from "@/app/chatgpt-auth";
 import { services, projects, articles, type Entry } from "./content";
 export async function isAdmin() {

@@ -1,6 +1,6 @@
 # ADEX Engineering & Contracting
 
-A responsive corporate website based on the supplied ADEX design reference. React 19, TypeScript, Next-compatible App Router through Vinext, custom CSS, Lucide, Cloudflare D1 / Drizzle and private R2 storage. The source is designed for OpenAI Sites' Cloudflare Worker runtime; this is not a drop-in Vercel deployment.
+A responsive corporate website based on the supplied ADEX design reference. React 19, TypeScript, Next-compatible App Router through Vinext, custom CSS, Lucide, Cloudflare D1 / Drizzle and private R2 storage. The source is designed for OpenAI Sites' Cloudflare Worker runtime; a separate Next.js build supports Vercel hosting.
 
 ## Run locally
 
@@ -55,3 +55,9 @@ For another Cloudflare deployment, configure the same bindings and secrets and a
 ## Verification
 
 See `TESTING.md` for checks actually executed and remaining configuration limits. All photography and example portfolio entries are illustrative. See `ASSETS.md` for sources.
+
+## Vercel deployment
+
+`vercel.json` selects Next.js and `npm run build:vercel`, which creates `.next/routes-manifest.json`. Node is pinned to 22.x. Leave the Vercel project build/output overrides at the repository defaults. Use `npm run start:vercel` to serve this build locally. The existing Vinext build remains available for Sites/Cloudflare.
+
+Vercel serves the public pages and bundled catalogue. Cloudflare D1/R2 storage and the trusted Sites sign-in gateway are not available there. Enquiry submissions and uploads return an explicit unavailable response until a persistent storage integration is configured; admin access is disabled. No submitted data is silently accepted or discarded. Keep using the existing Sites deployment for those backend features. Never trust incoming `oai-authenticated-*` headers on Vercel.

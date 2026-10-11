@@ -1,4 +1,4 @@
-import { env } from "cloudflare:workers";
+import { env } from "@/lib/runtime";
 import { isAdmin, sameOrigin, limitedFormData } from "@/lib/server";
 export const dynamic = "force-dynamic";
 export async function GET() {

@@ -27,3 +27,12 @@ File validation checks size, MIME and signature; malware scanning is not integra
 2. Start `npm run dev -- --host 127.0.0.1`.
 3. Run `node tests/integration.mjs` from the project directory.
 4. Remove the temporary local allowlist when finished. The suite refuses non-localhost targets.
+
+## Vercel compatibility verification
+
+- `npm run build:vercel`: passed; generated `.next/routes-manifest.json`.
+- `npm run build`: existing Vinext/Cloudflare build passed.
+- Production Next.js HTTP checks: `/`, `/team`, `/services`, `/services/electrical-works`, and `/sitemap.xml` returned 200.
+- Forged Sites identity headers on `/api/admin` returned 403.
+- Same-origin enquiry request without storage returned an explicit 503, not a false success.
+- Vercel cloud deployment must complete in the connected Vercel project; these checks verify local production output and responses.

@@ -1,3 +1,4 @@
+import { trustedSitesIdentity } from "@/lib/runtime";
 import { isAdmin } from "@/lib/server";
 import { getChatGPTUser, chatGPTSignInPath } from "@/app/chatgpt-auth";
 import { Admin } from "@/components/admin";
@@ -18,11 +19,13 @@ export default async function AdminPage() {
           <div className="empty-state">
             <h2>Authorized staff access</h2>
             <p>
-              {user
+              {!trustedSitesIdentity
+                ? "Administration requires the connected Sites deployment. It is not configured on this host."
+                : user
                 ? "Your account is not on the administrator allowlist. Ask the site owner to authorize your account."
                 : "Sign in with an authorized account to manage website content and enquiries."}
             </p>
-            {!user && (
+            {!user && trustedSitesIdentity && (
               <a
                 className="button"
                 href={chatGPTSignInPath("/admin")}

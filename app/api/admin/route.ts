@@ -1,4 +1,4 @@
-import { env } from "cloudflare:workers";
+import { env } from "@/lib/runtime";
 import { z } from "zod";
 import { isAdmin, sameOrigin } from "@/lib/server";
 export const dynamic = "force-dynamic";
