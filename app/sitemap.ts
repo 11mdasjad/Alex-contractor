@@ -4,6 +4,7 @@ export default async function sitemap() {
   const paths = [
     "",
     "about",
+    "team",
     "services",
     "projects",
     "process",

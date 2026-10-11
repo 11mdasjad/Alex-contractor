@@ -28,9 +28,9 @@ export function Logo() {
   return (
     <img
       className="brand-mark"
-      src="/images/adex-logo.jpeg"
-      width={1254}
-      height={1254}
+      src="/images/adex-logo-new.jpeg"
+      width={1280}
+      height={853}
       alt="ADEX Engineering and Contracting logo"
     />
   );
@@ -171,6 +171,7 @@ export function Shell({
             <h4>Explore ADEX</h4>
             {[
               ["About us", "/about"],
+              ["Our team", "/team"],
               ["Our process", "/process"],
               ["Projects", "/projects"],
               ["Insights", "/insights"],

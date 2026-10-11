@@ -1,0 +1,67 @@
+/* eslint-disable @next/next/no-img-element -- Local SVG profile illustrations. */
+import type { Metadata } from "next";
+import { PageHero, CTA } from "@/components/site";
+import { origin } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: "Our Team",
+  description: "Meet the ADEX team across project leadership, operations, site coordination and client relationships.",
+  alternates: { canonical: origin + "/team" },
+};
+
+const members = [
+  {
+    name: "Md Saif Ali", slug: "md-saif-ali", role: "Project Lead",
+    bio: "A clear direction from the first conversation to the final handover. Saif’s focus is project planning, aligning priorities and keeping clients and delivery teams connected throughout the work.",
+    focus: ["Project planning", "Team coordination", "Delivery"],
+  },
+  {
+    name: "Mamoon Rashid", slug: "mamoon-rashid", role: "Operations Lead",
+    bio: "Turning project plans into organised day-to-day action. Mamoon’s focus is coordinating resources, following up with suppliers and supporting a steady workflow between the office and the site.",
+    focus: ["Operations", "Resource planning", "Procurement"],
+  },
+  {
+    name: "Firoz Alam", slug: "firoz-alam", role: "Site Coordination Lead",
+    bio: "Keeping the details of site execution in view. Firoz’s focus is work coordination, progress updates and bringing workmanship or safety concerns to the right people for timely attention.",
+    focus: ["Site coordination", "Progress tracking", "Workmanship"],
+  },
+  {
+    name: "Ashfaque Alam", slug: "ashfaque-alam", role: "Client Relations Lead",
+    bio: "Making every project conversation clear and constructive. Ashfaque’s focus is understanding client requirements, coordinating enquiries and keeping communication flowing from the initial brief through project updates.",
+    focus: ["Client relationships", "Project enquiries", "Communication"],
+  },
+];
+
+export default function TeamPage() {
+  return (
+    <>
+      <PageHero title="The people behind ADEX." eyebrow="OUR TEAM" description="Shared purpose. Clear responsibilities. A thoughtful approach to every project." image="/images/engineers.jpg" />
+      <section className="section container">
+        <div className="team-intro">
+          <div className="eyebrow">WORKING TOGETHER</div>
+          <h2>One team. Every stage of your project.</h2>
+          <p>From understanding your requirements to coordinating work on site, meet the people bringing the different parts of your project together.</p>
+        </div>
+        <div className="team-grid">
+          {members.map((member) => (
+            <article className="team-card" key={member.slug} aria-labelledby={member.slug}>
+              <div className="team-visual">
+                <img src={`/images/team/${member.slug}.svg`} alt={`${member.name} — initials illustration`} width={600} height={280} />
+                <span className="team-visual-label">ADEX · Engineering &amp; Contracting</span>
+              </div>
+              <div className="team-card-body">
+                <h2 id={member.slug}>{member.name}</h2>
+                <p className="team-role">{member.role}</p>
+                <p className="team-bio">{member.bio}</p>
+                <div className="team-focus" aria-label="Areas of focus">
+                  {member.focus.map((item) => <span key={item}>{item}</span>)}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <CTA />
+    </>
+  );
+}

@@ -260,6 +260,7 @@ export const faqs = [
 export const nav = [
   ["Home", "/"],
   ["About", "/about"],
+  ["Team", "/team"],
   ["Services", "/services"],
   ["Projects", "/projects"],
   ["Our Process", "/process"],

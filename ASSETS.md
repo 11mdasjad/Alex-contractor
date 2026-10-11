@@ -1,6 +1,6 @@
 # Asset provenance
 
-The complete user-supplied ADEX logo is stored unchanged in `public/images/adex-logo.jpeg`. The header and footer display the full image with proportional contain sizing and no cropping. The earlier website composite remains in `public/images/brand-reference.png` for reference.
+The current user-supplied ADEX logo is stored unchanged in `public/images/adex-logo-new.jpeg` and displayed with contain sizing. Team SVG visuals are custom initials-based placeholders, not photographs. Team positions and responsibility-focused introductions are proposed editorial copy selected at the user’s request; no qualifications, employment history or achievements are asserted.
 
 Illustrative stock photography downloaded from Unsplash. No photograph is represented as ADEX's own work. Usage subject to the Unsplash license: https://unsplash.com/license
 
