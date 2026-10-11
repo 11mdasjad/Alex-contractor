@@ -15,3 +15,5 @@ Illustrative stock photography downloaded from Unsplash. No photograph is repres
 Inter and Manrope are loaded from Google Fonts under their open font licenses. System sans-serif fallbacks apply when unavailable. Lucide icons are distributed under ISC.
 
 Afsar Ali’s user-supplied portrait is stored unchanged in `public/images/team/afsar-ali.jpeg`, with top-centered positioning in the shared circular frame.
+
+Ashfaque Alam’s user-supplied portrait is stored unchanged in `public/images/team/ashfaque-alam.png`, with top-centered positioning in the shared circular frame.

@@ -2188,3 +2188,5 @@ label .required {
 .service-category-nav a:hover, .service-category-nav a:focus-visible { background: #082b55; color: white; }
 .service-category-section { margin-bottom: 52px; scroll-margin-top: 115px; }
 .service-category-section > h2 { margin-bottom: 24px; font-size: clamp(23px, 3vw, 30px); }
+
+.team-avatar .team-portrait-ashfaque-alam { object-position: center top; }

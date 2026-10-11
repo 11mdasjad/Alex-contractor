@@ -35,6 +35,7 @@ const members = [
   },
   {
     name: "Ashfaque Alam", slug: "ashfaque-alam", role: "HR Manager",
+    photo: "/images/team/ashfaque-alam.png",
     bio: "Supporting the people behind every project. Ashfaque’s focus is coordinating recruitment and onboarding, maintaining employee records and helping team members with day-to-day HR queries and workplace communication.",
     focus: ["Recruitment", "Onboarding", "Employee support"],
   },
@@ -56,7 +57,7 @@ export default function TeamPage() {
               <div className="team-visual">
                 <div className="team-avatar">
                   {member.photo ? (
-                    <img className={`team-portrait team-portrait-${member.slug}`} src={member.photo} alt={member.name} width={member.slug === "afsar-ali" ? 692 : member.slug === "firoz-alam" ? 990 : 960} height={member.slug === "afsar-ali" ? 852 : 1280} />
+                    <img className={`team-portrait team-portrait-${member.slug}`} src={member.photo} alt={member.name} width={member.slug === "ashfaque-alam" ? 984 : member.slug === "afsar-ali" ? 692 : member.slug === "firoz-alam" ? 990 : 960} height={member.slug === "ashfaque-alam" ? 1599 : member.slug === "afsar-ali" ? 852 : 1280} />
                   ) : (
                     <span className="team-initials" aria-label={`${member.name} — initials illustration`} role="img">
                       {member.name.split(" ").map((part) => part[0]).join("")}
