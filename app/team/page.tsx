@@ -5,7 +5,7 @@ import { origin } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Our Team",
-  description: "Meet the ADEX team across project leadership, operations, site coordination and client relationships.",
+  description: "Meet the ADEX team across project leadership and operations.",
   alternates: { canonical: origin + "/team" },
 };
 
@@ -22,16 +22,7 @@ const members = [
     bio: "Turning project plans into organised day-to-day action. Mamoon’s focus is coordinating resources, following up with suppliers and supporting a steady workflow between the office and the site.",
     focus: ["Operations", "Resource planning", "Procurement"],
   },
-  {
-    name: "Firoz Alam", slug: "firoz-alam", role: "Site Coordination Lead",
-    bio: "Keeping the details of site execution in view. Firoz’s focus is work coordination, progress updates and bringing workmanship or safety concerns to the right people for timely attention.",
-    focus: ["Site coordination", "Progress tracking", "Workmanship"],
-  },
-  {
-    name: "Ashfaque Alam", slug: "ashfaque-alam", role: "Client Relations Lead",
-    bio: "Making every project conversation clear and constructive. Ashfaque’s focus is understanding client requirements, coordinating enquiries and keeping communication flowing from the initial brief through project updates.",
-    focus: ["Client relationships", "Project enquiries", "Communication"],
-  },
+
 ];
 
 export default function TeamPage() {
