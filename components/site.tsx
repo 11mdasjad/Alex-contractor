@@ -26,10 +26,12 @@ import {
 import { nav, services, faqs, type Entry } from "@/lib/content";
 export function Logo() {
   return (
-    <span
+    <img
       className="brand-mark"
-      role="img"
-      aria-label="ADEX Engineering and Contracting logo"
+      src="/images/adex-logo.jpeg"
+      width={1254}
+      height={1254}
+      alt="ADEX Engineering and Contracting logo"
     />
   );
 }

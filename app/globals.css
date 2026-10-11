@@ -120,13 +120,10 @@ select:focus-visible {
 }
 .brand-mark {
   display: block;
-  width: 66px;
-  height: 68px;
-  background-image: url("/images/brand-reference.png");
-  background-size: 1843.2px 1228.8px;
-  background-position: -51px 0;
-  background-repeat: no-repeat;
-  border-radius: 50%;
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  object-position: center;
   flex-shrink: 0;
 }
 .navigation {
@@ -794,7 +791,8 @@ footer {
 }
 .footer-brand .brand-mark {
   background-color: white;
-  width: 66px;
+  width: 112px;
+  height: 112px;
   margin-bottom: 18px;
 }
 .footer-brand h3 {
@@ -1706,9 +1704,8 @@ label .required {
     height: 73px;
   }
   .brand-mark {
-    transform: scale(0.85);
-    transform-origin: left center;
-    width: 66px;
+    width: 60px;
+    height: 60px;
   }
   .menu-toggle {
     display: grid;
@@ -1973,7 +1970,7 @@ label .required {
     transform: none;
   }
   .footer-brand p {
-    margin-left: 86px;
+    margin-left: 132px;
   }
   .footer-grid > div:last-child {
     grid-column: 1/-1;
