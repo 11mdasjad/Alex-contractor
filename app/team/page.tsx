@@ -1,11 +1,11 @@
-/* eslint-disable @next/next/no-img-element -- Local SVG profile illustrations. */
+/* eslint-disable @next/next/no-img-element -- Local team portraits and CSS initials visuals. */
 import type { Metadata } from "next";
 import { PageHero, CTA } from "@/components/site";
 import { origin } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Our Team",
-  description: "Meet the ADEX team across project leadership and operations.",
+  description: "Meet the ADEX team across project leadership, operations, IT and safety.",
   alternates: { canonical: origin + "/team" },
 };
 
@@ -22,7 +22,16 @@ const members = [
     bio: "Turning project plans into organised day-to-day action. Firoz’s focus is coordinating resources, following up with suppliers and supporting a steady workflow between the office and the site.",
     focus: ["Operations", "Resource planning", "Procurement"],
   },
-
+  {
+    name: "Md Asjad", slug: "md-asjad", role: "IT Manager",
+    bio: "Keeping technology connected to everyday work. Asjad’s focus is maintaining IT systems, supporting the team with technical issues and organising digital tools that help the office and project teams work efficiently.",
+    focus: ["IT systems", "Technical support", "Digital tools"],
+  },
+  {
+    name: "Afsar Ali", slug: "afsar-ali", role: "Safety Manager",
+    bio: "Making safety part of everyday site coordination. Afsar’s focus is supporting safety briefings, tracking site observations and coordinating follow-up actions with the project team to encourage responsible working practices.",
+    focus: ["Site safety", "Safety briefings", "Site observations"],
+  },
 ];
 
 export default function TeamPage() {
